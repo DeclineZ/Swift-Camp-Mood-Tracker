@@ -14,7 +14,7 @@ class moods {
     var date: Date
     var note: String
     
-    init(mood: Int, date: Date = Date.now, note: String = "") {
+    init(mood: Int = 0, date: Date = Date.now, note: String = "") {
         self.mood = mood
         self.date = date
         self.note = note

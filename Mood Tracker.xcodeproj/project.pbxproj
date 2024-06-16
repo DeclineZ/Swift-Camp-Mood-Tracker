@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8412AFE02C1EAD7F00A7DCF7 /* addMood1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412AFDF2C1EAD7F00A7DCF7 /* addMood1.swift */; };
+		8412AFE42C1EB6FA00A7DCF7 /* moodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8412AFE32C1EB6FA00A7DCF7 /* moodRow.swift */; };
 		846C51952C1E7AEB00253708 /* Mood_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C51942C1E7AEB00253708 /* Mood_TrackerApp.swift */; };
 		846C51972C1E7AEB00253708 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846C51962C1E7AEB00253708 /* ContentView.swift */; };
 		846C51992C1E7AED00253708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846C51982C1E7AED00253708 /* Assets.xcassets */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8412AFDF2C1EAD7F00A7DCF7 /* addMood1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMood1.swift; sourceTree = "<group>"; };
+		8412AFE32C1EB6FA00A7DCF7 /* moodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moodRow.swift; sourceTree = "<group>"; };
 		846C51912C1E7AEB00253708 /* Mood Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mood Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		846C51942C1E7AEB00253708 /* Mood_TrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mood_TrackerApp.swift; sourceTree = "<group>"; };
 		846C51962C1E7AEB00253708 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,8 @@
 		846C51932C1E7AEB00253708 /* Mood Tracker */ = {
 			isa = PBXGroup;
 			children = (
+				8412AFE32C1EB6FA00A7DCF7 /* moodRow.swift */,
+				8412AFDF2C1EAD7F00A7DCF7 /* addMood1.swift */,
 				846C51942C1E7AEB00253708 /* Mood_TrackerApp.swift */,
 				846C51962C1E7AEB00253708 /* ContentView.swift */,
 				846C51BE2C1E7C8D00253708 /* Model */,
@@ -270,7 +276,9 @@
 			files = (
 				846C51972C1E7AEB00253708 /* ContentView.swift in Sources */,
 				846C51C02C1E7E1E00253708 /* moods.swift in Sources */,
+				8412AFE02C1EAD7F00A7DCF7 /* addMood1.swift in Sources */,
 				846C51952C1E7AEB00253708 /* Mood_TrackerApp.swift in Sources */,
+				8412AFE42C1EB6FA00A7DCF7 /* moodRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

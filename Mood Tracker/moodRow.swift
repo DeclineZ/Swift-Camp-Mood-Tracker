@@ -8,8 +8,30 @@
 import SwiftUI
 
 struct moodRow: View {
+    var mood = moods()
+    @Environment(\.modelContext) var context
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack(spacing: 10) {
+            if (mood.mood == 1) {
+                Text("☹️").font(.system(size: 30))
+            } else if (mood.mood == 2) {
+                Text("🙁").font(.system(size: 30))
+            } else if (mood.mood == 3) {
+                Text("😐").font(.system(size: 30))
+            } else if (mood.mood == 4) {
+                Text("😃").font(.system(size: 30))
+            } else if (mood.mood == 5) {
+                Text("😄").font(.system(size: 30))
+            }
+            VStack(alignment: .leading) {
+                Text(mood.date, style: .date)
+                    .font(.title3)
+                
+                Text(mood.note)
+                    .font(.caption)
+            }
+        }
+
     }
 }
 

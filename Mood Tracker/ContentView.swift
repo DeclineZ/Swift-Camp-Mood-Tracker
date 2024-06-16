@@ -10,7 +10,7 @@ import SwiftData
 
 struct ContentView: View {
     @Environment(\.modelContext) var context
-    @Query var mood: [moods]
+    @Query var moods: [moods]
     @State var showAddMood: Bool = false
     @State var showMoodStatistics: Bool = false
     
@@ -20,7 +20,15 @@ struct ContentView: View {
             Text("Emotion Diary").font(.title).fontWeight(.bold )
             Button("Add A Mood", action: {showAddMood.toggle()})
             Spacer()
-            
+            NavigationStack {
+                    List {
+                        ForEach(moods) {
+                            mood in moodRow(mood: mood)
+                        }
+                    }
+                    .navigationTitle("Recent")
+                    .navigationBarTitleDisplayMode(.inline)
+                }
             Button("View Mood Statistics", action: {showMoodStatistics.toggle()})
             
         }

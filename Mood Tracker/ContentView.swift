@@ -13,6 +13,7 @@ struct ContentView: View {
     @Query var moods: [moods]
     @State var showAddMood: Bool = false
     @State var showMoodStatistics: Bool = false
+    @State var num: Int = 0
     
     var body: some View {
         VStack {
@@ -29,14 +30,27 @@ struct ContentView: View {
                     .navigationTitle("Recent")
                     .navigationBarTitleDisplayMode(.inline)
                 }
-            Button("View Mood Statistics", action: {showMoodStatistics.toggle()})
+            Text("Your Overall Mood")
+            if (num == 1) {
+                Text("☹️").font(.system(size: 30))
+            } else if (num == 2) {
+                Text("🙁").font(.system(size: 30))
+            } else if (num == 3) {
+                Text("😐").font(.system(size: 30))
+            } else if (num == 4) {
+                Text("😃").font(.system(size: 30))
+            } else if (num == 5) {
+                Text("😄").font(.system(size: 30))
+            }
             
+        }.onAppear(){
+            num = moods.lazy.map(\.mood).reduce(0) { $0 + Int($1) } / moods.count
+            print(moods.lazy.map(\.mood).reduce(0) { $0 + Int($1) } / moods.count)
         }
         .sheet(isPresented: $showAddMood, content: {
             addMood1()
-        }).sheet(isPresented: $showMoodStatistics, content: {
-            
         })
         .padding()
     }
+    
 }
